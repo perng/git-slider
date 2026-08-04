@@ -1,0 +1,9 @@
+{
+  "name": "git-slider",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Chrome extension for moving through open GitHub issues and pull requests.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

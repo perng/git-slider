@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Git Slider lets you move to the previous or next open GitHub issue or pull request with one key or one click.">
+    <meta name="theme-color" content="#0d1117">
+    <title>Git Slider — Stay in the queue</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grid" aria-hidden="true"></div>
+    <header class="site-header shell">
+      <a class="wordmark" href="./" aria-label="Git Slider home">
+        <span class="mini-slider" aria-hidden="true"><i></i></span>
+        <span>GIT SLIDER</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/perng/git-slider">Source</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> A TINY CONTROL FOR LONG QUEUES</p>
+          <h1>Stay in the issue.<br><em>Move through the queue.</em></h1>
+          <p class="lede">Jump to the previous or next open GitHub issue or pull request without backing out to the list. Closed work gets skipped automatically.</p>
+          <div class="hero-actions">
+            <span class="button button-disabled" aria-disabled="true">Chrome Web Store <b>SOON</b></span>
+            <a class="text-link" href="#controls">See the controls <span>↓</span></a>
+          </div>
+          <p class="microcopy">No token. No account. No analytics.</p>
+        </div>
+
+        <div class="hero-demo" aria-label="A demonstration of Git Slider controls">
+          <div class="window-bar">
+            <div><span></span><span></span><span></span></div>
+            <p>github.com/perng/git-slider/issues/42</p>
+          </div>
+          <div class="issue-stage">
+            <div class="repo-line"><span class="repo-icon">◆</span> perng / <strong>git-slider</strong></div>
+            <div class="issue-title"><span class="open-ring"></span><h2>Add keyboard navigation <small>#42</small></h2></div>
+            <div class="fake-lines"><span></span><span></span><span></span></div>
+            <div class="slider-control">
+              <i></i>
+              <button type="button" tabindex="-1">‹ <kbd>[</kbd></button>
+              <span><small>OPEN</small><b>ISSUE</b></span>
+              <button type="button" tabindex="-1"><kbd>]</kbd> ›</button>
+            </div>
+          </div>
+          <div class="queue-label"><span>41</span><strong>42</strong><span>47</span><i></i></div>
+        </div>
+      </section>
+
+      <section id="controls" class="control-strip">
+        <div class="shell control-grid">
+          <article><span class="index">01</span><kbd>[</kbd><h2>Previous open</h2><p>Find the nearest older open item in the same repository.</p></article>
+          <article><span class="index">02</span><kbd>]</kbd><h2>Next open</h2><p>Move forward to the nearest newer open item in one keystroke.</p></article>
+          <article><span class="index">03</span><span class="click-mark">↗</span><h2>One-click rail</h2><p>Use the compact in-page control or the toolbar popup instead.</p></article>
+        </div>
+      </section>
+
+      <section class="how shell">
+        <div>
+          <p class="kicker"><span></span> BUILT FOR TRIAGE</p>
+          <h2>It keeps your place,<br>not your data.</h2>
+        </div>
+        <ol>
+          <li><span>01</span><div><strong>Open an issue or PR</strong><p>Git Slider recognizes GitHub detail pages automatically.</p></div></li>
+          <li><span>02</span><div><strong>Choose a direction</strong><p>Use a bracket key, the page rail, popup, or browser shortcut.</p></div></li>
+          <li><span>03</span><div><strong>Land on open work</strong><p>GitHub’s own filtered lists identify the nearest open item.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="privacy-note shell">
+        <span class="shield" aria-hidden="true">◇</span>
+        <div><p class="kicker">PRIVACY BY ABSENCE</p><h2>Nothing leaves GitHub.</h2></div>
+        <p>Navigation is computed in your browser. Git Slider has no server, analytics, advertising, account, or API token. It uses your existing GitHub session only to view pages you can already access.</p>
+        <a href="privacy.html">Read the privacy policy →</a>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>GIT SLIDER / 2026</span>
+      <span>BUILT FOR GITHUB ISSUE &amp; PR QUEUES</span>
+      <div><a href="privacy.html">Privacy</a><a href="support.html">Support</a></div>
+    </footer>
+  </body>
+</html>

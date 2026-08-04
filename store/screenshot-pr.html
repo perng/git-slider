@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1280, initial-scale=1">
+    <title>Git Slider pull request navigation screenshot</title>
+    <link rel="stylesheet" href="../content.css">
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1280px; height: 800px; margin: 0; overflow: hidden; }
+      body { background: #fff url("assets/screenshot-pr-live.png") center/1280px 800px no-repeat; }
+      .callout { position: fixed; right: 19px; bottom: 78px; z-index: 2147483645; display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #f0f6fc; background: rgba(13,17,23,.94); border: 1px solid rgba(255,255,255,.14); border-radius: 7px; box-shadow: 0 10px 30px rgba(1,4,9,.28); font: 700 10px ui-monospace, SFMono-Regular, monospace; letter-spacing: .04em; }
+      .callout span { color: #f78166; }
+    </style>
+  </head>
+  <body>
+    <div class="callout"><span>SAME FLOW</span> FOR OPEN PULL REQUESTS ↓</div>
+    <aside id="git-slider-controls" aria-label="Git Slider navigation">
+      <div class="git-slider__signal" aria-hidden="true"><span></span></div>
+      <button type="button" aria-label="Previous open pull request"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.75 3.75 6.5 8l4.25 4.25"/></svg><kbd>[</kbd></button>
+      <div class="git-slider__identity" aria-hidden="true"><span>OPEN</span><strong>PR</strong></div>
+      <button type="button" aria-label="Next open pull request"><kbd>]</kbd><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.25 3.75 9.5 8l-4.25 4.25"/></svg></button>
+      <div class="git-slider__status" role="status"></div>
+    </aside>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1280, initial-scale=1">
+    <title>Git Slider popup screenshot</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1280px; height: 800px; margin: 0; overflow: hidden; }
+      body { background: #fff url("assets/screenshot-live.png") center/1280px 800px no-repeat; }
+      body::after { content: ""; position: fixed; inset: 0; background: rgba(1,4,9,.25); }
+      .label { position: fixed; z-index: 2; left: 46px; bottom: 44px; color: #f0f6fc; font: 400 50px/1.04 Iowan Old Style, Palatino, Georgia, serif; letter-spacing: -.045em; text-shadow: 0 3px 25px rgba(1,4,9,.55); }
+      .label span { display: block; margin-bottom: 11px; color: #f78166; font: 700 10px ui-monospace, SFMono-Regular, monospace; letter-spacing: .15em; }
+      iframe { position: fixed; z-index: 3; top: 20px; right: 22px; width: 348px; height: 335px; border: 0; border-radius: 0 0 10px 10px; box-shadow: 0 24px 70px rgba(1,4,9,.5); }
+    </style>
+  </head>
+  <body>
+    <div class="label"><span>THE QUEUE, AT YOUR FINGERTIPS</span>Navigate without<br>backtracking.</div>
+    <iframe src="popup-preview.html" title="Git Slider extension popup"></iframe>
+  </body>
+</html>
