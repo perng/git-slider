@@ -1,0 +1,183 @@
+#git-slider-controls {
+  --gs-accent: #f78166;
+  --gs-border: rgba(255, 255, 255, 0.14);
+  --gs-fg: #f0f6fc;
+  --gs-muted: #8b949e;
+  position: fixed;
+  z-index: 2147483646;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  grid-template-columns: 8px 44px auto 44px;
+  align-items: stretch;
+  min-height: 42px;
+  color: var(--gs-fg);
+  background: rgba(13, 17, 23, 0.94);
+  border: 1px solid var(--gs-border);
+  border-radius: 9px;
+  box-shadow: 0 12px 34px rgba(1, 4, 9, 0.32), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", "Liberation Mono", monospace;
+  overflow: visible;
+  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-font-smoothing: antialiased;
+}
+
+#git-slider-controls .git-slider__signal {
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--gs-border);
+}
+
+#git-slider-controls .git-slider__signal::before {
+  content: "";
+  width: 2px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(139, 148, 158, 0.25);
+}
+
+#git-slider-controls .git-slider__signal span {
+  position: absolute;
+  left: 2px;
+  width: 4px;
+  height: 9px;
+  border-radius: 1px;
+  background: var(--gs-accent);
+  box-shadow: 0 0 8px rgba(247, 129, 102, 0.65);
+  transition: transform 180ms ease;
+}
+
+#git-slider-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 44px;
+  padding: 0;
+  color: var(--gs-fg);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 120ms ease, background 120ms ease;
+}
+
+#git-slider-controls button:first-of-type {
+  border-right: 1px solid var(--gs-border);
+}
+
+#git-slider-controls button:last-of-type {
+  border-left: 1px solid var(--gs-border);
+}
+
+#git-slider-controls button:hover {
+  color: #fff;
+  background: rgba(247, 129, 102, 0.14);
+}
+
+#git-slider-controls button:focus-visible {
+  outline: 2px solid var(--gs-accent);
+  outline-offset: -3px;
+}
+
+#git-slider-controls button:disabled {
+  cursor: wait;
+  opacity: 0.45;
+}
+
+#git-slider-controls button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#git-slider-controls kbd {
+  color: var(--gs-muted);
+  background: none;
+  border: 0;
+  box-shadow: none;
+  font: 9px/1 ui-monospace, "SFMono-Regular", monospace;
+}
+
+#git-slider-controls .git-slider__identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 58px;
+  padding: 0 9px;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+#git-slider-controls .git-slider__identity span {
+  color: #3fb950;
+  font-size: 8px;
+  line-height: 1.25;
+}
+
+#git-slider-controls .git-slider__identity strong {
+  color: var(--gs-fg);
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+#git-slider-controls .git-slider__status {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 7px);
+  max-width: 220px;
+  padding: 6px 9px;
+  color: var(--gs-fg);
+  background: rgba(13, 17, 23, 0.96);
+  border: 1px solid var(--gs-border);
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(1, 4, 9, 0.28);
+  font-size: 10px;
+  line-height: 1.3;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(3px);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+#git-slider-controls .git-slider__status:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#git-slider-controls[data-tone="loading"] .git-slider__signal span {
+  animation: git-slider-scan 650ms ease-in-out infinite alternate;
+}
+
+#git-slider-controls[data-tone="success"] .git-slider__signal span {
+  background: #3fb950;
+}
+
+#git-slider-controls[data-tone="error"] .git-slider__signal span {
+  background: #f85149;
+}
+
+@keyframes git-slider-scan {
+  from { transform: translateY(-7px); }
+  to { transform: translateY(7px); }
+}
+
+@media (max-width: 640px) {
+  #git-slider-controls {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #git-slider-controls,
+  #git-slider-controls * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

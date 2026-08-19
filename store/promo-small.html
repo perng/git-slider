@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=440, initial-scale=1"><title>Git Slider promo</title>
+    <style>
+      * { box-sizing: border-box; } html, body { width: 440px; height: 280px; margin: 0; overflow: hidden; }
+      body { position: relative; color: #f0f6fc; background: #0d1117; font-family: ui-monospace, SFMono-Regular, monospace; }
+      body::before { content: ""; position: absolute; inset: 0; opacity: .7; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 20px 20px; }
+      .brand { position: absolute; left: 28px; top: 27px; display: flex; align-items: center; gap: 9px; font-size: 9px; font-weight: 800; letter-spacing: .14em; }
+      .mark { position: relative; display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid #30363d; border-radius: 6px; background: #161b22; }.mark::before { content: ""; width: 16px; height: 2px; background: #8b949e; }.mark::after { content: ""; position: absolute; width: 4px; height: 14px; border-radius: 1px; background: #f78166; transform: translateX(3px); }
+      h1 { position: absolute; left: 28px; top: 82px; width: 285px; margin: 0; font: 400 40px/.98 Iowan Old Style, Palatino, Georgia, serif; letter-spacing: -.05em; } h1 em { color: #f78166; font-weight: 400; }
+      .keys { position: absolute; right: 25px; bottom: 28px; display: flex; align-items: center; gap: 7px; }.keys kbd { display: grid; place-items: center; width: 38px; height: 38px; color: #f0f6fc; background: #161b22; border: 1px solid #30363d; border-bottom-color: #6e7681; border-radius: 7px; box-shadow: 0 3px #010409; font: 18px ui-monospace, monospace; }.keys i { width: 35px; height: 1px; background: #f78166; }
+      p { position: absolute; left: 29px; bottom: 30px; margin: 0; color: #8b949e; font-size: 8px; letter-spacing: .09em; }
+    </style>
+  </head>
+  <body><div class="brand"><span class="mark"></span>GIT SLIDER</div><h1>Stay in the issue.<br><em>Move through the queue.</em></h1><p>OPEN ISSUES + PULL REQUESTS</p><div class="keys"><kbd>[</kbd><i></i><kbd>]</kbd></div></body>
+</html>

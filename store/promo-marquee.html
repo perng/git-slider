@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=1400, initial-scale=1"><title>Git Slider marquee</title>
+    <style>
+      * { box-sizing: border-box; } html, body { width: 1400px; height: 560px; margin: 0; overflow: hidden; }
+      body { position: relative; color: #f0f6fc; background: #0d1117; font-family: ui-monospace, SFMono-Regular, monospace; }
+      body::before { content: ""; position: absolute; inset: 0; opacity: .72; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 28px 28px; }
+      body::after { content: ""; position: absolute; width: 640px; height: 640px; right: -160px; top: -290px; border: 1px solid rgba(247,129,102,.22); border-radius: 50%; box-shadow: 0 0 0 100px rgba(247,129,102,.025), 0 0 0 210px rgba(247,129,102,.018); }
+      .brand { position: absolute; left: 76px; top: 65px; display: flex; align-items: center; gap: 15px; font-size: 13px; font-weight: 800; letter-spacing: .15em; }.mark { position: relative; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #30363d; border-radius: 8px; background: #161b22; }.mark::before { content: ""; width: 25px; height: 3px; background: #8b949e; }.mark::after { content: ""; position: absolute; width: 6px; height: 24px; border-radius: 2px; background: #f78166; transform: translateX(5px); box-shadow: 0 0 15px rgba(247,129,102,.5); }
+      h1 { position: absolute; left: 76px; top: 176px; margin: 0; font: 400 80px/.95 Iowan Old Style, Palatino, Georgia, serif; letter-spacing: -.055em; } h1 em { color: #f78166; font-weight: 400; }
+      .sub { position: absolute; left: 80px; bottom: 73px; color: #8b949e; font-size: 11px; letter-spacing: .12em; }.queue { position: absolute; right: 84px; bottom: 82px; display: flex; align-items: center; gap: 17px; }.queue kbd { display: grid; place-items: center; width: 77px; height: 77px; color: #f0f6fc; background: #161b22; border: 1px solid #30363d; border-bottom: 4px solid #010409; border-radius: 12px; font: 32px ui-monospace, monospace; }.queue i { width: 95px; height: 2px; background: #f78166; }.queue::before { content: "PREVIOUS"; position: absolute; left: 8px; bottom: -24px; color: #6e7681; font-size: 8px; letter-spacing: .1em; }.queue::after { content: "NEXT"; position: absolute; right: 24px; bottom: -24px; color: #6e7681; font-size: 8px; letter-spacing: .1em; }
+    </style>
+  </head>
+  <body><div class="brand"><span class="mark"></span>GIT SLIDER</div><h1>Stay in the issue.<br><em>Move through the queue.</em></h1><div class="sub">OPEN GITHUB ISSUES + PULL REQUESTS / ONE KEY OR ONE CLICK</div><div class="queue"><kbd>[</kbd><i></i><kbd>]</kbd></div></body>
+</html>

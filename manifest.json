@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Git Slider",
+  "description": "Jump to the previous or next open GitHub issue or pull request.",
+  "version": "1.0.0",
+  "homepage_url": "https://ai.perng.com/extensions/git-slider/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Git Slider",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "commands": {
+    "previous-open-item": {
+      "suggested_key": {
+        "default": "Alt+Shift+Left"
+      },
+      "description": "Go to the previous open issue or pull request"
+    },
+    "next-open-item": {
+      "suggested_key": {
+        "default": "Alt+Shift+Right"
+      },
+      "description": "Go to the next open issue or pull request"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/issues/*",
+        "https://github.com/*/*/pull/*"
+      ],
+      "js": ["navigator.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

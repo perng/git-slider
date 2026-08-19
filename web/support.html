@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Help and support for the Git Slider Chrome extension.">
+    <meta name="theme-color" content="#0d1117">
+    <title>Support — Git Slider</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grid" aria-hidden="true"></div>
+    <header class="site-header shell">
+      <a class="wordmark" href="./"><span class="mini-slider" aria-hidden="true"><i></i></span><span>GIT SLIDER</span></a>
+      <nav aria-label="Main navigation"><a href="privacy.html">Privacy</a><a aria-current="page" href="support.html">Support</a><a href="https://github.com/perng/git-slider">Source</a></nav>
+    </header>
+
+    <main class="support shell">
+      <div class="support-intro">
+        <p class="kicker"><span></span> SUPPORT DESK</p>
+        <h1>Keep the queue<br><em>moving.</em></h1>
+        <p>Most problems can be fixed in under a minute. Start with the checks below or open a support request.</p>
+        <a class="button" href="https://github.com/perng/git-slider/issues/new">Open a support request <b>↗</b></a>
+      </div>
+      <div class="faq">
+        <details open><summary><span>01</span>The controls do not appear</summary><p>Confirm you are on a URL shaped like <code>github.com/owner/repository/issues/123</code> or <code>github.com/owner/repository/pull/123</code>. If the tab was open before installation or an update, reload it once.</p></details>
+        <details><summary><span>02</span>The bracket keys do not navigate</summary><p>Git Slider ignores shortcuts while your cursor is in a text field, comment editor, or code editor so it does not interrupt typing. Click outside the editor and try <kbd>[</kbd> or <kbd>]</kbd> again.</p></details>
+        <details><summary><span>03</span>How do I change browser shortcuts?</summary><p>Open <code>chrome://extensions/shortcuts</code>. Find Git Slider, then assign your preferred keys to the previous and next commands.</p></details>
+        <details><summary><span>04</span>Why does it say there is no next item?</summary><p>You may already be viewing the newest open issue or pull request of that type. Issues and pull requests are separate queues, and closed or merged items are intentionally skipped.</p></details>
+        <details><summary><span>05</span>Does it work with private repositories?</summary><p>Yes. Git Slider uses your existing GitHub browser session and can navigate repositories you can already view. It never asks for or stores a GitHub token.</p></details>
+      </div>
+    </main>
+
+    <footer class="site-footer shell"><span>GIT SLIDER / 2026</span><span>SUPPORT</span><div><a href="./">Home</a><a href="privacy.html">Privacy</a></div></footer>
+  </body>
+</html>
